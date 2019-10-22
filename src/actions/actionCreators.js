@@ -1,6 +1,10 @@
 import axios from 'axios';
 import defaultLocation from '../config/defaultLocation.js';
 
+const RESTAURANT_CATEGORY_ID = '4d4b7105d754a06374d81259';
+const FOURSQUARE_API_VERSION = '20180323';
+const TARGET_RADIUS = 1000;
+
 export const updateRestaurants = (restaurants) => {
   return {
     type: 'UPDATE_RESTAURANTS',
@@ -35,9 +39,9 @@ export const updateRestaurantsAsync = () => {
         client_id: process.env.REACT_APP_FOURSQUARE_CLIENT_ID,
         client_secret: process.env.REACT_APP_FOURSQUARE_CLIENT_SECRET,
         ll: `${defaultLocation.lat},${defaultLocation.lng}`,
-        categoryId: '4d4b7105d754a06374d81259',
-        radius: 1000,
-        v: '20180323',
+        categoryId: RESTAURANT_CATEGORY_ID,
+        radius: TARGET_RADIUS,
+        v: FOURSQUARE_API_VERSION,
         limit: 50
       }});
       const responseRestaurants = data.response.groups[0].items.map((item) => item.venue)
@@ -56,11 +60,11 @@ export const searchRestaurantsAsync = (query = "") => {
         client_id: process.env.REACT_APP_FOURSQUARE_CLIENT_ID,
         client_secret: process.env.REACT_APP_FOURSQUARE_CLIENT_SECRET,
         ll: `${defaultLocation.lat},${defaultLocation.lng}`,
-        categoryId: '4d4b7105d754a06374d81259',
-        query: query,
-        radius: 1000,
-        v: '20180323',
-        limit: 50
+        categoryId: RESTAURANT_CATEGORY_ID,
+        radius: TARGET_RADIUS,
+        v: FOURSQUARE_API_VERSION,
+        limit: 50,
+        query
       }});
       const responseRestaurants = data.response.venues
       dispatch(updateRestaurants(responseRestaurants));

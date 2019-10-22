@@ -5,19 +5,18 @@
   box-shadow: 0 0 5px #AAA;
   border-top: 5px solid #FEDFDF;
   margin-bottom: 10px;
-  transition: top 0.4s ease-in-out;
   &:hover {
     cursor: pointer;
   }
   &[aria-selected=true] {
     border-top: 5px solid #E53E3E;
   }
-  h1 {
+  &__name {
     font-size: 18px;
     font-weight: 600;
     line-height: 1.2em;
   }
-  h2 {
+  &__address {
     line-height: 1.2em;
     font-size: 14px;
     margin-top: 10px;

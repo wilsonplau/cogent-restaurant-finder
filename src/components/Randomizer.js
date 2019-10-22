@@ -5,7 +5,7 @@ import '../styles/Randomizer.scss';
 import diceIcon from '../assets/images/dice.svg';
 
 export const Randomizer = ({ randomizeRestaurant }) => (
-  <button className="randomizer" onClick={randomizeRestaurant}>
+  <button className="randomizer" onClick={randomizeRestaurant} aria-label="Randomize">
     <img src={diceIcon} alt="A pair of dice" />
     Roll for a random restaurant
   </button>

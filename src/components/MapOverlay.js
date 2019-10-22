@@ -4,14 +4,12 @@ import Search from './Search.js';
 import Results from './Results.js';
 import '../styles/MapOverlay.scss';
 
-const MapOverlay = () => {
-  return (
-    <div className="mapOverlay">
-      <Randomizer />
-      <Search />
-      <Results />
-    </div>
-  )
-}
+const MapOverlay = () => (
+  <div className="mapOverlay">
+    <Randomizer />
+    <Search />
+    <Results />
+  </div>
+)
 
 export default MapOverlay;

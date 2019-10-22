@@ -31,7 +31,7 @@ export const Search = ({ searchRestaurantsAsync, updateRestaurantsAsync, updateF
       /> 
 
       { searchInput && filter === searchInput ?
-        <button className="search__button" onClick={handleClearSearch} aria-label="Exit">
+        <button className="search__button" onClick={handleClearSearch} aria-label="Clear Search">
           <img src={exit} alt="An exit icon" />
         </button>
       : 
@@ -39,7 +39,6 @@ export const Search = ({ searchRestaurantsAsync, updateRestaurantsAsync, updateF
           <img src={arrowRight} alt="An arrow pointing right" />
         </button>
       }
-      
     </form>
   )
 }

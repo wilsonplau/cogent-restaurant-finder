@@ -4,6 +4,7 @@ import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-map
 import { setSelectedRestaurant } from '../actions/actionCreators.js';
 import mapStyles from '../config/mapStyles.js';
 import defaultLocation from '../config/defaultLocation.js'
+import '../styles/Map.scss';
 import markerCogent from '../assets/images/markerCogent.svg'
 import markerActive from '../assets/images/markerActive.svg'
 import markerInactive from '../assets/images/markerInactive.svg'
@@ -38,15 +39,17 @@ const MapInner = withScriptjs(withGoogleMap(({ filteredRestaurants, selectedRest
 	)
 }));
 
-export const Map = ({ filteredRestaurants, selectedRestaurant, setSelectedRestaurant }) => <MapInner
-	googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_MAPS_KEY}`}
-	loadingElement={<div className="map__loading" style={{ height: `100%` }} />}
-	containerElement={<div className="map__container" style={{ height: `100vh` }} />}
-	mapElement={<div className="map" style={{ height: `100%` }} />}
-	filteredRestaurants={filteredRestaurants}
-	selectedRestaurant={selectedRestaurant}
-	setSelectedRestaurant={setSelectedRestaurant}
-/>;
+export const Map = ({ filteredRestaurants, selectedRestaurant, setSelectedRestaurant }) => (
+	<MapInner
+		googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_MAPS_KEY}`}
+		loadingElement={<div className="map__loading" />}
+		containerElement={<div className="map__container" />}
+		mapElement={<div className="map" />}
+		filteredRestaurants={filteredRestaurants}
+		selectedRestaurant={selectedRestaurant}
+		setSelectedRestaurant={setSelectedRestaurant}
+	/>
+);
 
 const mapStateToProps = ({ filteredRestaurants, selectedRestaurant }) => ({ filteredRestaurants, selectedRestaurant });
 export default connect(mapStateToProps, { setSelectedRestaurant })(Map);

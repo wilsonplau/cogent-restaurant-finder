@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux'
 import { updateRestaurantsAsync } from './actions/actionCreators.js';
-
 import './styles/Reset.scss';
 import './styles/App.scss';
 import Map from './components/Map.js';
