@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="96px" height="74px" viewBox="0 0 96 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-319.000000, -106.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="noun_Dice_328253" transform="translate(254.000000, 106.000000)">
+                <g id="noun_Arrow_1920806" transform="translate(63.000000, 0.000000)">
+                    <path d="M95.4,32 L66.1,2.7 C63.4,-3.55271368e-15 58.9,-3.55271368e-15 56.2,2.7 C53.5,5.4 53.5,9.9 56.2,12.6 L73.5,30 L9.5,30 C5.6,30 2.5,33.1 2.5,37 C2.5,40.9 5.6,44 9.5,44 L73.5,44 L56.2,61.3 C53.5,64 53.5,68.5 56.2,71.2 C57.6,72.6 59.4,73.3 61.2,73.3 C63,73.3 64.8,72.6 66.2,71.2 L95.4,42 C96.7,40.7 97.5,38.9 97.5,37 C97.5,35.1 96.8,33.3 95.4,32 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
