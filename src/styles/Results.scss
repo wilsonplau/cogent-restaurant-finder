@@ -13,4 +13,10 @@
     bottom: 0;
     height: 150px;  
   }
+  &__error {
+    padding: 25px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #AAA;
+  }
 }

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import RestaurantItem from './RestaurantItem.js';
 import '../styles/Results.scss';
 
-export const Results = ({ selectedRestaurant, filteredRestaurants }) => {
+export const Results = ({ selectedRestaurant, filteredRestaurants, filter }) => {
   const resultsRef = useRef();
   
   useEffect(() => {
@@ -19,6 +19,7 @@ export const Results = ({ selectedRestaurant, filteredRestaurants }) => {
 
   return (
     <div className="results" ref={resultsRef}>
+      { filteredRestaurants.length === 0 && filter && <div className="results__error">No results found.</div> }
       { filteredRestaurants
           .sort((restaurantA, restaurantB) => restaurantA.location.distance - restaurantB.location.distance)
           .map((restaurant) => 
@@ -33,5 +34,5 @@ export const Results = ({ selectedRestaurant, filteredRestaurants }) => {
   )
 }
 
-const mapStateToProps = ({ selectedRestaurant, filteredRestaurants }) => ({ selectedRestaurant, filteredRestaurants });
+const mapStateToProps = ({ selectedRestaurant, filteredRestaurants, filter }) => ({ selectedRestaurant, filteredRestaurants, filter });
 export default connect(mapStateToProps)(Results);
