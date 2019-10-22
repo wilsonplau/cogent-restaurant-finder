@@ -4,4 +4,9 @@
   top: 50px;
   left: 50px;
   width: 300px;
+  @media (max-width: 480px) {
+    width: calc(100vw - 10%);
+    top: 25px;
+    left: 5%;
+  }
 }
