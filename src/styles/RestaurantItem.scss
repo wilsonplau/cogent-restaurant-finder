@@ -1,0 +1,46 @@
+.restaurantItem {
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 5px #AAA;
+  border-top: 5px solid #FEDFDF;
+  margin-bottom: 10px;
+  transition: top 0.4s ease-in-out;
+  &:hover {
+    cursor: pointer;
+  }
+  &[aria-selected=true] {
+    border-top: 5px solid #E53E3E;
+  }
+  h1 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2em;
+  }
+  h2 {
+    line-height: 1.2em;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #5F5F5F;
+  }
+  &__bottom {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__tag {
+    font-size: 10px;
+    border: 1px solid #AAA;
+    background-color: #F5F5F5;
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+  }
+  &__distance {
+    color: #222;
+    font-size: 12px;
+    line-height: 22px;
+  }
+}
